@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung dung chuyen doi tu meters sang feed</title>
+</head>
+<body>
+    <input type="text" id="input" placeholder="Number"/>
+    <select id="chon">
+        <option id="op1" value="meters">meters</option>
+        <option id="op2" value="feed">feed</option>
+        <input type="button" onclick="chuyenDoi()" value="Ket qua"/>
+    </select>
+    <div id="show"></div>
+</body>
+<script>
+    function chuyenDoi() {
+        var a = document.getElementById("input").value;
+        var b = document.getElementById("chon").value;
+        if (b == "feed") {
+            var c = a * 0.305;
+            document.getElementById("show").innerHTML =a + " feed " + " = " + c + " Meters";
+        } else {
+            var c = a * 3;
+            document.getElementById("show").innerHTML = a + " Meters " + " = " + c + " feed";
+        }
+    }
+</script>
+</html>
